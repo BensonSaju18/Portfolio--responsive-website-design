@@ -441,18 +441,7 @@ body {
   text-align: justify;
 }
 
-.btn-see-more {
-  display: inline-block;
-  text-decoration: none;
-  background: linear-gradient(90deg, #00f0ff 0%, #009ba3 100%);
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 700;
-  padding: 12px 32px;
-  border-radius: 20px;
-  box-shadow: 0 6px 16px rgba(0, 213, 232, 0.35);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
+
 
 .btn-see-more:hover {
   opacity: 0.9;
