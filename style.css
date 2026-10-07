@@ -731,9 +731,9 @@ body {
 }
 
 /* ========================================= 
-   PROJECTS SECTION 
+   2. PROJECTS SECTION 
    ========================================= */ 
- 
+
 .projects-section { 
   width: 100%; 
   max-width: 1200px; 
@@ -743,28 +743,28 @@ body {
   flex-direction: column; 
   align-items: center; 
 } 
- 
+
 /* Header Text Styles */ 
 .projects-header { 
   text-align: center; 
   max-width: 680px; 
   margin-bottom: 60px; 
 } 
- 
+
 .section-title { 
   font-size: 40px; 
   color: #4a4a4a; 
   font-weight: 800; 
   margin-bottom: 18px; 
 } 
- 
+
 .section-subtitle { 
   font-size: 14.5px; 
   color: #555555; 
   line-height: 1.6; 
 } 
- 
-/* 3-Column Grid Layout */ 
+
+/* 3-Column Grid Layout (Automatically wraps new rows) */ 
 .projects-grid { 
   width: 100%; 
   display: grid; 
@@ -772,12 +772,12 @@ body {
   gap: 32px; 
   align-items: start; 
 } 
- 
+
 .project-card { 
   display: flex; 
   flex-direction: column; 
 } 
- 
+
 /* Image Containers with View Overlay */ 
 .project-image-wrapper { 
   position: relative; 
@@ -790,7 +790,7 @@ body {
   cursor: pointer; 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
 } 
- 
+
 .project-image-wrapper img { 
   width: 100%; 
   height: 100%; 
@@ -798,12 +798,12 @@ body {
   display: block; 
   transition: transform 0.4s ease; 
 } 
- 
+
 /* Hover Zoom Effect */ 
 .project-image-wrapper:hover img { 
   transform: scale(1.08); 
 } 
- 
+
 /* View Project Overlay */ 
 .project-overlay { 
   position: absolute; 
@@ -819,7 +819,7 @@ body {
   padding: 15px;
   transition: opacity 0.3s ease; 
 } 
- 
+
 .project-image-wrapper:hover .project-overlay { 
   opacity: 1; 
 } 
@@ -838,7 +838,7 @@ body {
 .project-image-wrapper:hover .btn-group { 
   transform: translateY(0); 
 } 
- 
+
 /* View Project Button (Primary Style) */ 
 .btn-view-project { 
   display: inline-flex; 
@@ -862,12 +862,12 @@ body {
   color: #232536;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
- 
+
 .btn-view-project:hover { 
   opacity: 0.9; 
   transform: scale(1.04);
 } 
- 
+
 /* Card Titles & Subtext */ 
 .project-title { 
   font-size: 20px; 
@@ -875,31 +875,31 @@ body {
   font-weight: 700; 
   margin-bottom: 8px; 
 } 
- 
+
 .project-category { 
   font-size: 14px; 
   color: #666666; 
   font-weight: 400; 
 } 
- 
+
 /* ========================================= 
-   Responsive Breakpoints 
+   3. Responsive Breakpoints 
    ========================================= */ 
- 
+
 /* Tablets & Small Laptops (<= 1024px) */ 
 @media screen and (max-width: 1024px) { 
   .projects-section { 
     padding: 80px 30px; 
   } 
- 
+
   .projects-grid { 
     gap: 24px; 
   } 
- 
+
   .project-image-wrapper { 
     height: 200px; 
   } 
- 
+
   .section-title { 
     font-size: 36px; 
   } 
@@ -909,77 +909,77 @@ body {
     font-size: 12px;
   }
 } 
- 
+
 /* Tablets (2-Column Grid Layout) (<= 768px) */ 
 @media screen and (max-width: 768px) { 
   .projects-section { 
     padding: 70px 20px; 
   } 
- 
+
   .projects-header { 
     margin-bottom: 45px; 
   } 
- 
+
   .projects-grid { 
     grid-template-columns: repeat(2, 1fr); 
     gap: 24px; 
   } 
- 
+
   .project-image-wrapper { 
     height: 220px; 
   } 
- 
+
   .section-title { 
     font-size: 32px; 
   } 
 } 
- 
+
 /* Mobile Devices (1-Column Grid Layout) (<= 480px) */ 
 @media screen and (max-width: 480px) { 
   .projects-section { 
     padding: 50px 16px; 
   } 
- 
+
   .projects-header { 
     margin-bottom: 35px; 
   } 
- 
+
   .projects-grid { 
     grid-template-columns: 1fr; 
     gap: 30px; 
   } 
- 
+
   .project-image-wrapper { 
     height: 210px; 
   } 
- 
+
   /* Show view overlay button permanently on touch devices */ 
   .project-overlay { 
     opacity: 1; 
     background: rgba(35, 37, 54, 0.45); 
   } 
- 
+
   .btn-group { 
     transform: translateY(0); 
   } 
- 
+
   .btn-view-project { 
     padding: 8px 14px; 
     font-size: 12.5px; 
   } 
- 
+
   .section-title { 
     font-size: 28px; 
   } 
- 
+
   .section-subtitle { 
     font-size: 13.5px; 
   } 
- 
+
   .project-title { 
     font-size: 18px; 
   } 
- 
+
   .project-category { 
     font-size: 13px; 
   } 
