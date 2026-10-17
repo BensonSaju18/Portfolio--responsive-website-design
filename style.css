@@ -363,7 +363,7 @@ ul {
 }
 
 /* ==========================================================================
-   7. FEATURED PROJECTS SECTION
+   ALTERNATIVE PROJECT SECTION STYLING
    ========================================================================== */
 .projects-section {
   padding: 6rem 2rem;
@@ -387,93 +387,131 @@ ul {
   gap: 2.5rem;
 }
 
-.project-card {
-  background-color: var(--bg-card);
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--border-color);
-  padding: 1.25rem;
-  transition: var(--transition);
+/* Increase Project Card Height */
+.project-card-alt {
+  min-height: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.project-card:hover {
-  border-color: rgba(255, 77, 45, 0.4);
-  transform: translateY(-5px);
-}
-
-.project-image-wrapper {
+/* Increase Project Image Height */
+.project-img-container {
   position: relative;
-  border-radius: 12px;
+  width: 100%;
+  height: 350px;
+  aspect-ratio: auto;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
-  margin-bottom: 1.25rem;
+  background-color: var(--bg-primary);
+  flex-shrink: 0;
 }
 
-.project-image-wrapper img {
+/* Make Image Fit */
+.project-img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition);
+  display: block;
+  transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-image-wrapper img {
-  transform: scale(1.05);
+/* Responsive Height */
+@media (max-width: 768px) {
+  .project-card-alt {
+    min-height: 450px;
+  }
+
+  .project-img-container {
+    height: 300px;
+  }
 }
 
-.project-overlay {
+.project-card-alt:hover .project-img-container img {
+  transform: scale(1.06);
+}
+
+.project-overlay-alt {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(10, 12, 16, 0.85);
+  inset: 0;
+  background: rgba(10, 12, 16, 0.75);
+  backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: var(--transition);
+  transition: opacity 0.3s ease;
 }
 
-.project-card:hover .project-overlay {
+.project-card-alt:hover .project-overlay-alt {
   opacity: 1;
 }
 
-.btn-group {
+.btn-group-alt {
   display: flex;
   gap: 1rem;
+  transform: translateY(15px);
+  transition: transform 0.3s ease;
 }
 
-.btn-view-project {
+.project-card-alt:hover .btn-group-alt {
+  transform: translateY(0);
+}
+
+.proj-btn {
   background-color: var(--accent-color);
   color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 20px;
+  padding: 0.65rem 1.25rem;
+  border-radius: 25px;
   font-size: 0.85rem;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  box-shadow: 0 4px 12px var(--accent-glow);
 }
 
-.btn-view-project.btn-secondary {
+.proj-btn.proj-btn-outline {
   background-color: transparent;
-  border: 1px solid var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: none;
 }
 
-.btn-view-project:hover {
-  transform: scale(1.05);
+.proj-btn.proj-btn-outline:hover {
+  border-color: var(--text-main);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.proj-btn:hover {
+  background-color: var(--accent-hover);
   color: #fff;
 }
 
-.project-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+.project-info-alt {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
-.project-category {
-  color: var(--text-muted);
-  font-size: 0.875rem;
+.project-tag {
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================================================
